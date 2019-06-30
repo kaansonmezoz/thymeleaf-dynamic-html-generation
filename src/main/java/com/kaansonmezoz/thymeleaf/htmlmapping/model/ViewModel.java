@@ -48,10 +48,6 @@ public class ViewModel {
         return viewModelList;
     }
 
-    public int getInt(String key){
-        return (int) dictionary.get(key);
-    }
-
     public ViewModel getSubDictionary(String key){
         return new ViewModel((HashMap<String, Object>) dictionary.get(key));
     }
