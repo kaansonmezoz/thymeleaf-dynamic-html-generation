@@ -152,7 +152,7 @@ public class StupidControllerService {
                 "                  <td th:text=\"${item.getString('AppliedAmount') + ' TL'}\"></td>\n" +
                 "              </tr>\n" +
                 "              \n" +
-                "              <tr th:if=\"${Model.getString('InstallmentCommissionAmount')=='0'}\">\n" +
+                "              <tr th:if=\"not ${#strings.equals(Model.getString('InstallmentCommissionAmount'), '0')}\">\n" +
                 "                  <td>Taksit Farkı</td>\n" +
                 "                  <td>-</td>\n" +
                 "                  <td th:text=\"${Model.getString('InstallmentCommissionAmount') + ' TL'}\"></td>\n" +
